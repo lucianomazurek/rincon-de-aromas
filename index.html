@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda de velas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./Images/logotipo-favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,15 +27,88 @@
   </head>
   <body>
     <header>
-      <h1>Tienda de velas</h1>
+      <nav class="navbar navbar-expand-md">
+        <div
+          class="container-fluid d-flex justify-content-between align-items-center"
+        >
+          <!-- Título -->
+          <h1 class="m-0">Tienda de velas</h1>
+
+          <!-- Botón -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuOculto"
+            aria-controls="menuOculto"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú colapsable -->
+          <div class="collapse navbar-collapse" id="menuOculto">
+            <div class="ms-auto gap-3 caja-links">
+              <a href="./index.html">Inicio</a>
+              <a href="./sobre-nosotros.html">Sobre nosotros</a>
+              <a href="./faq.html">Preguntas frecuentes</a>
+              <a href="./cuidados.html">Cuidados</a>
+              <a href="./contacto.html">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </header>
-    <nav>
-      <a href="./index.html">Inicio</a>
-      <a href="./link-uno.html">Sobre nosotros</a>
-      <a href="./link-dos.html">Preguntas frecuentes</a>
-      <a href="./link-tres.html">Cuidados</a>
-      <a href="./link-cuatro.html">Contacto</a>
-    </nav>
+    <!-- Botón de ir al carrito -->
+    <button
+      class="btn btn-primary boton-flotante"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasWithBothOptions"
+      aria-controls="offcanvasWithBothOptions"
+    >
+      Ir al carrito
+    </button>
+
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          Carrito
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>Ningún producto agregado</p>
+      </div>
+    </div>
+    <!-- Banner debajo del navbar -->
+    <section class="caja-img-banner">
+      <img
+        class="img-banner"
+        src="./Images/imagen-header.jpg"
+        alt="Velas aromáticas de cera de soja"
+      />
+      <div class="contenido-img-banner">
+        <h2 class="descripcion-banner">Llevá nuestros aromas a tu hogar</h2>
+        <p class="parrafo-banner">
+          Dale vida a tus espacios con nuestras velas de soja
+        </p>
+        <button class="action-button">Comprar</button>
+      </div>
+    </section>
+    <!-- Contenido principal -->
     <main>
       <article>
         <p>
@@ -38,38 +117,171 @@
           Descubrí nuestra colección de aromas, colores y formas, y dejá que
           cada llama te cuente una historia. Ya sea para regalar, para decorar o
           simplemente para regalarte un instante de paz, estás en el lugar
-          perfecto.
+          perfecto. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Saepe itaque repellat quisquam dolorem, maiores earum suscipit
+          pariatur aliquam alias. Aut incidunt iste officiis hic placeat illum,
+          beatae distinctio nobis minima!
         </p>
       </article>
-      <div class="separador"></div>
-      <h2>Nuestras creaciones</h2>
+      <h2 class="presentacion-productos">Nuestras creaciones</h2>
       <section class="seccion-imagenes">
-        <div>
+        <div class="card" style="width: 26rem">
           <img
-            src="./Images/imagen-inicio.jpg"
-            alt="Velas perfumadas de vainilla y coco"
+            src="./Images/vainilla-coco.jpg"
+            class="card-img-top"
+            alt="Vela aromática de vainilla y coco"
           />
-          <h3>Vainilla y coco</h3>
+          <div class="card-body">
+            <h4 class="card-title">Vainilla y coco</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
         </div>
-        <div>
+        <div class="card" style="width: 26rem">
           <img
-            src="./Images/imagen-inicio-dos.jpg"
-            alt="Velas perfumadas de flores blancas"
+            src="./Images/flores-blancas.jpg"
+            class="card-img-top"
+            alt="Vela aromática de flores blancas"
           />
-          <h3>Flores blancas</h3>
+          <div class="card-body">
+            <h4 class="card-title">Flores blancas</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
         </div>
-        <div>
+        <div class="card" style="width: 26rem">
           <img
-            src="./Images/imagen-inicio-tres.jpg"
-            alt="Velas perfumadas de lima y verbena"
+            src="./Images/lima-verbena.jpg"
+            class="card-img-top"
+            alt="Vela aromática de lima y verbena"
           />
-          <h3>Lima y verbena</h3>
+          <div class="card-body">
+            <h4 class="card-title">Lima y verbena</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
         </div>
+        <div class="card" style="width: 26rem">
+          <img
+            src="./Images/naranja-pimienta.jpg"
+            class="card-img-top"
+            alt="Vela aromática de naranja y pimienta"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Naranja y pimienta</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
+        </div>
+        <div class="card" style="width: 26rem">
+          <img
+            src="./Images/manzana-canela.jpg"
+            class="card-img-top"
+            alt="Vela aromática de manzana y canela"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Manzana y canela</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
+        </div>
+        <div class="card" style="width: 26rem">
+          <img
+            src="./Images/te-verde-jengibre.jpg"
+            class="card-img-top"
+            alt="Vela aromática de te verde y jengibre"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Té verde y jengibre</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
+        </div>
+        <div class="card" style="width: 26rem">
+          <img
+            src="./Images/lavanda.jpg"
+            class="card-img-top"
+            alt="Vela aromática de lavanda"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Lavanda</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
+        </div>
+        <div class="card" style="width: 26rem">
+          <img
+            src="./Images/mango-maracuya.jpg"
+            class="card-img-top"
+            alt="Vela aromática de mango y maracuyá"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Mango y maracuyá</h5>
+            <a href="#" class="btn">¡La quiero!</a>
+          </div>
+        </div>
+      </section>
+      <section class="seccion-aceites">
+        <div class="caja-img-banner">
+          <img
+            class="img-banner"
+            src="./Images/aceite-esencial-banner.jpg"
+            alt="Aceite esencial"
+          />
+          <div class="contenido-img-banner">
+            <h2 class="descripcion-banner">
+              Conocé nuestros aceites esenciales
+            </h2>
+            <p class="parrafo-banner">
+              Hechos con plantas, pensados para tu día a día
+            </p>
+            <button class="action-button">Comprar</button>
+          </div>
+        </div>
+      </section>
+      <!-- Carrusel de fotos -->
+      <section>
+        <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./Images/aceite-romero.jpg" class="d-block w-100 img-carrusel" alt="Aceite esencial de romero">
+      <div class="carousel-caption">
+        <h5>Romero</h5>
+        <p>Estimula la concentración y aporta un aroma herbal intenso</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./Images/aceite-lavanda.jpg" class="d-block w-100 img-carrusel" alt="Aceite esencial de lavanda">
+      <div class="carousel-caption">
+        <h5>Lavanda</h5>
+        <p>Aroma suave, ideal para bajar el ritmo y relajar</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./Images/aceite-eucalipto.jpg" class="d-block w-100 img-carrusel" alt="Aceite esencial de eucalipto">
+      <div class="carousel-caption">
+        <h5>Eucalipto</h5>
+        <p>Refresca el ambiente y ayuda a despejar las vías respiratorias</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
     </main>
     <footer>
-  <p>Gracias por apoyar lo hecho a mano.</p>
-  <p>Encontranos en Instagram: @velas.tumarca</p>
-  <p>Escribinos: hola@velastumarca.com</p>
-</footer>
+      <p class="texto-footer">Gracias por apoyar lo hecho a mano.</p>
+      <p class="texto-footer">Encontranos en Instagram: @velas.tumarca</p>
+      <p class="texto-footer">Escribinos: hola@velastumarca.com</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

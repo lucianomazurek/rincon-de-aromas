@@ -1,59 +1,83 @@
+/* =====================================
+CONFIGURACIÓN GLOBAL
+===================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
+html,
 body {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   min-height: 100vh;
 }
 main {
   flex: 1;
 }
+img {
+  height: 300px;
+}
+article {
+  margin: 20px 0 0 0;
+}
+span {
+  font-weight: bolder;
+}
+
+/* =====================================
+TIPOGRAFÍAS Y TEXTOS
+===================================== */
 h1 {
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   color: #dcd7c9;
   font-size: 35px;
   padding: 8px;
   margin: 8px 0 8px 20px;
 }
 h2 {
-  font-family: Playfair Display;
+  font-family: "Playfair Display";
   color: #a27b5c;
   font-size: 35px;
   margin: 0;
 }
 h3 {
-  font-family: Lato;
+  font-family: "Lato";
   color: #dcd7c9;
   font-size: 20px;
   margin: 3px 0 0 15px;
   font-weight: 500;
 }
-.preguntas-frecuentes {
-  box-sizing: border-box;
-  font-family: Playfair Display;
-  color: #a27b5c;
+h4 {
+  overflow-y: hidden;
+}
+h5 {
+  color: black;
+  font-family: "Playfair Display";
   font-size: 30px;
-  margin: 20px 0 0 15px;
+  overflow-y: hidden;
 }
-.caja-preguntas {
-  margin: 20px 0 0 15px;
-  border-radius: 25px;
-  background-color: #a27b5c40;
-  height: 300px;
-  width: 450px;
+p {
+  text-align: center;
+  color: #2c3930;
+  font-family: "Lato";
+  margin: 0 15px 0 15px;
 }
-.contenedor-caja-preguntas {
-  display: flex;
-  gap: 20px;
+a {
+  text-decoration: none;
+  color: #dcd7c9;
+  margin: 0 16px;
+  font-family: "Lato";
+  font-size: 18px;
 }
-.respuesta-preguntas {
-  margin: 20px;
-  text-align: justify;
+a:hover {
+  color: #a27b5c;
 }
+
+/* =====================================
+HEADER Y BANNER
+===================================== */
 header {
   background-color: #2c3930;
 }
@@ -71,7 +95,8 @@ header {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-.img-banner, .img-banner-dos {
+.img-banner,
+.img-banner-dos {
   width: 100%;
   height: 600px;
 }
@@ -100,68 +125,10 @@ header {
   color: white;
   text-align: center;
 }
-p {
-  color: #2c3930;
-  font-family: Lato;
-  margin: 0 15px 0 15px;
-}
-h4 {
-  overflow-y: hidden;
-}
-h5 {
-  color: black;
-  font-family: "Playfair Display";
-  font-size: 52px;
-  overflow-y: hidden;
-}
-.btn {
-  border: 2px solid #a27b5c;
-  margin: 12px 0 0 0;
-}
-.btn:hover {
-  background-color: #a27b5c;
-}
-.card {
-  transition: ease 1.07s;
-}
-.card:hover {
-  transform: scale(1.04);
-}
-.card-body {
-  background-color: #dcd7c9;
-}
-.card-img-top {
-  height: 400px;
-}
-.seccion-imagenes {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  row-gap: 24px;
-}
-a {
-  text-decoration: none;
-  color: #dcd7c9;
-  margin: 0 16px;
-  font-family: Lato;
-  font-size: 18px;
-}
-a:hover {
-  color: #a27b5c;
-}
-.action-button {
-  width: 14%;
-  color: white;
-  padding: 8px;
-  background-color: #a27b5c;
-  border: 3px solid transparent;
-  border-radius: 20px;
-}
-.action-button:hover {
-  background-color: #dcd7c9;
-  color: black;
-}
+
+/* =====================================
+SECCIÓN PRODUCTOS Y CARDS
+===================================== */
 .presentacion-productos {
   font-size: 3rem;
   border-bottom: 2px solid #a27b5c;
@@ -169,18 +136,73 @@ a:hover {
   margin-top: 40px;
   overflow-y: hidden;
 }
-article {
-  margin: 20px 0 0 0;
+.seccion-imagenes {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 16px;
 }
-span {
-  font-weight: bolder;
+.producto-card {
+  width: 100%;
+  max-width: 320px;
+  transition: ease 1.07s;
+  border-radius: 8px;
+  background-color: beige;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
+.producto-card:hover {
+  transform: scale(1.04);
+}
+.producto-img {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+.producto-body {
+  background-color: #dcd7c9;
+}
+
+/* =====================================
+PREGUNTAS FRECUENTES
+===================================== */
+.preguntas-frecuentes {
+  box-sizing: border-box;
+  font-family: "Playfair Display";
+  color: #a27b5c;
+  font-size: 30px;
+  margin: 20px 0 0 15px;
+}
+.caja-preguntas {
+  margin: 20px 8px 0 8px;
+  border-radius: 25px;
+  background-color: #a27b5c40;
+  height: 300px;
+  width: 450px;
+}
+.contenedor-caja-preguntas {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.respuesta-preguntas {
+  margin: 20px;
+  text-align: justify;
+}
+
+/* =====================================
+FORMULARIO
+===================================== */
 form {
   display: flex;
   flex-direction: column;
   margin: 50px auto 0 auto;
   gap: 20px;
-  width: 50%;
+  width: 80%;
   padding: 20px;
   border-radius: 20px;
 }
@@ -200,12 +222,12 @@ form {
   border: 2px solid #2c3930;
   border-radius: 5px;
   color: #2c3930;
-  font-family: Lato;
+  font-family: "Lato";
   background-color: transparent;
 }
 .input-texto::placeholder {
   color: #a27b5c;
-  font-family: Lato;
+  font-family: "Lato";
 }
 textarea {
   padding: 10px 10px 0 10px;
@@ -216,7 +238,7 @@ textarea {
   background-color: transparent;
   border: 2px solid #2c3930;
   border-radius: 5px;
-  font-family: Lato;
+  font-family: "Lato";
   color: #a27b5c;
 }
 textarea::placeholder {
@@ -229,63 +251,39 @@ textarea::placeholder {
   padding: 10px;
   border-radius: 5px;
   color: #2c3930;
-  font-family: Lato;
+  font-family: "Lato";
 }
 .enviar:hover {
   background-color: #2c3930;
   color: #dcd7c9;
 }
-img {
-  height: 300px;
-}
-.contenedor-imagenes:hover {
-  transform: scale(1.05);
-}
-.subtitulo-sobre-nosotros {
-  text-align: center;
-  margin: 20px 0;
-  border-bottom: 2px solid #a27b5c;
-  overflow-y: hidden;
-}
-.mapa {
-  width: 600px;
-  height: 450px;
-  margin: 30px 0 0 15px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px #2c3930;
-}
+
+/* =====================================
+SECCIÓN MAPA
+===================================== */
 .seccion-mapa {
   display: flex;
   justify-content: space-around;
 }
-.descripcion-mapa {
-  box-sizing: border-box;
-  margin: 30px 0 0 0;
-  padding: 25px;
+.mapa {
+  width: 600px;
   height: 450px;
-  width: 500px;
-  border: 2px dotted #a27b5c;
+  margin: 22px 8px 0 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px #2c3930;
+}
+.descripcion-mapa {
+  margin: 22px 8px 8px 8px;
+  padding: 18px;
+  height: 450px;
+  width: 450px;
+  border: 2px solid #a27b5c;
   border-radius: 15px;
 }
-ul {
-  width: 800px;
-  border: 3px solid #a27b5c;
-  border-radius: 20px;
-  margin: 20px 0 0 15px;
-  padding: 20px;
-}
-li {
-  font-family: Lato;
-  margin: 5px 0 0 5px;
-}
-.introduccion-cuidados {
-  margin: 20px 0;
-}
-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
+
+/* =====================================
+SECCIÓN ACEITES
+===================================== */
 .seccion-aceites {
   margin-top: 24px;
 }
@@ -293,6 +291,54 @@ footer {
   max-width: 50%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+/* =====================================
+UL-LI Y SECCIÓN CUIDADOS
+===================================== */
+.contenedor-cuidados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul {
+  width: 80%;
+  border: 3px solid #a27b5c;
+  border-radius: 20px;
+  margin: 20px 0 0 15px;
+  padding: 20px;
+}
+li {
+  font-family: "Lato";
+  margin: 5px 0 0 5px;
+}
+.introduccion-cuidados {
+  margin: 20px 15px 20px 15px;
+}
+.subtitulo-cuidados {
+  margin: 0 0 0 15px;
+}
+/* =====================================
+BOTONES Y ACCIONES
+===================================== */
+.btn-custom {
+  border: 2px solid #a27b5c;
+  margin: 12px 0 0 0;
+}
+.btn-custom:hover {
+  background-color: #a27b5c;
+}
+.action-button {
+  width: 14%;
+  color: white;
+  padding: 8px;
+  background-color: #a27b5c;
+  border: 3px solid transparent;
+  border-radius: 20px;
+}
+.action-button:hover {
+  background-color: #dcd7c9;
+  color: black;
 }
 .boton-flotante {
   position: fixed;
@@ -306,23 +352,68 @@ footer {
   font-size: 20px;
   z-index: 2;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .boton-flotante:hover {
   background-color: #a27b5c;
   transform: scale(1.05);
 }
+.contenedor-imagenes:hover {
+  transform: scale(1.05);
+}
+
+/* =====================================
+CARRUSEL
+===================================== */
 .img-carrusel {
   height: 840px;
 }
 .carousel-caption p {
   font-size: 20px;
-  color: black;
+  color: #2c3930;
 }
-/*media query smartphones*/
 
+/* =====================================
+CARRITO
+===================================== */
+.header-carrito {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+.productos-carrito {
+  text-align: start;
+  margin: 0;
+  font-size: 20px;
+}
+.carrito-barra-lateral {
+  background-color: #dcd7c9;
+}
+
+/* =====================================
+FOOTER
+===================================== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.texto-footer {
+  font-size: 16px;
+  margin: 0;
+}
+.subtitulo-sobre-nosotros {
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 2px solid #a27b5c;
+  overflow-y: hidden;
+}
+
+/* =====================================
+MEDIA QUERIES
+===================================== */
+
+/* Mobile */
 @media (max-width: 576px) {
   header {
     flex-direction: column;
@@ -351,12 +442,13 @@ footer {
     padding: 0;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 32px;
+    align-items: start;
   }
-  .card {
+  .producto-card {
+    width: 100%;
     max-width: 180px;
-    min-height: none;
   }
-  .card-img-top {
+  .producto-img {
     height: 180px;
   }
   .parrafo-banner {
@@ -369,10 +461,6 @@ footer {
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
-  }
-  .texto-footer {
-    font-size: 14px;
-    margin: 0;
   }
   .seccion-mapa {
     flex-direction: column;
@@ -396,8 +484,122 @@ footer {
     font-size: 30px;
   }
   .carousel-caption p {
-  font-size: 16px;
+    font-size: 16px;
+  }
+  .contenedor-caja-preguntas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .caja-preguntas {
+    border-radius: 25px;
+    background-color: #a27b5c40;
+    height: 300px;
+    width: 350px;
+  }
+  .producto-body {
+    min-height: 145px;
+  }
 }
-/*media query tablets*/
+/* Tablet */
+@media (min-width: 576px) and (max-width: 767px) {
+  .seccion-imagenes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .seccion-mapa {
+    flex-direction: column;
+  }
+  .mapa {
+    width: 96%;
+  }
+  .descripcion-mapa {
+    height: 100%;
+    width: 96%;
+    border: 2px solid #a27b5c;
+    border-radius: 15px;
+  }
+  .contenedor-caja-preguntas {
+    flex-direction: column;
+    align-items: center;
+  }
+  .caja-preguntas {
+    height: 100%;
+  }
+  p {
+    font-size: 20px;
+  }
+  .input-texto::placeholder {
+    font-size: 20px;
+  }
+  textarea::placeholder {
+    font-size: 20px;
+  }
+  .enviar {
+    font-size: 20px;
+  }
+}
+/* Tablet grande */
+@media (min-width: 768px) and (max-width: 1023px) {
+  a {
+    font-size: 22px;
+  }
+  .seccion-imagenes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contenedor-caja-preguntas {
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    font-size: 20px;
+  }
+  .seccion-mapa {
+    flex-direction: column;
+  }
+  .mapa {
+    width: 96%;
+  }
+  .descripcion-mapa {
+    height: 100%;
+    width: 96%;
+    border: 2px solid #a27b5c;
+    border-radius: 15px;
+  }
+  .caja-preguntas {
+    height: 100%;
+  }
+  li {
+    font-size: 24px;
+  }
+  .subtitulo-cuidados {
+    font-size: 40px;
+  }
+  .input-texto::placeholder {
+    font-size: 20px;
+  }
+  textarea::placeholder {
+    font-size: 20px;
+  }
+  .enviar {
+    font-size: 20px;
+  }
+  .navbar .container-fluid {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 
-@media (min-width: );
+  .navbar .ms-auto {
+    margin-left: 0 !important;
+  }
+
+  .caja-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .navbar-toggler {
+    align-self: flex-end;
+  }
+}
